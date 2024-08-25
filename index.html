@@ -33,6 +33,7 @@
                 'pest-light': 'rgba(164, 218, 195, 1)',
                 'blue-light': 'rgba(119, 170, 234, 1)',
                 'commercial': 'rgba(73, 73, 73, 1)',
+                'footer-back': 'rgba(28, 28, 28, 1)',
               }
             }
           }
@@ -41,70 +42,77 @@
 </head>
 <body class="font-manrope">
     <header class="md:container md:mx-auto">
-        <nav>
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <a class="btn btn-ghost text-3xl font-extrabold">
-                  <span class="flex items-center justify-center h-10 w-10 bg-lemon-green rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-black fas fa-heart text-xl">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>
-                  </span>Rinterio</a>
-                  <div class="dropdown">
-                    <button id="hamburger" class="block md:hidden text-black">
-                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                      </svg>
-                    </button>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                    <li><a class="text-base font-bold text-zinc-600">Home</a></li>
-                    <li><a class="text-base text-gray-500">Services</a></li>
-                    <li><a class="text-base text-gray-500">Portfolio</a></li>
-                    <li><a class="text-base text-gray-500">Blogs</a></li>
-                    <li><a class="text-base text-gray-500">Contact Us</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="navbar-center hidden md:flex">
-                  <ul class="menu menu-horizontal px-1">
+        <!-- navbar part -->
+        <nav class="p-4 flex justify-between items-center">
+          <!-- Left Side: Text -->
+          <div>
+            <a class="btn btn-ghost text-3xl font-extrabold">
+              <span class="flex items-center justify-center h-10 w-10 bg-lemon-green rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  text-black fas fa-heart text-xl">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+              </span>Rinterio</a>
+          </div>
+        
+          <!-- Middle: List of Anchors -->
+          <ul class="hidden md:flex space-x-8">
                     <li><a class="text-base font-extrabold text-zinc-600">Home</a></li>
                     <li><a class="text-base text-gray-500">Services</a></li>
                     <li><a class="text-base text-gray-500">Portfolio</a></li>
                     <li><a class="text-base text-gray-500">Blogs</a></li>
                     <li><a class="text-base text-gray-500">Contact Us</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end gap-9 hidden md:flex">
-                    <span class="flex items-center justify-center h-10 w-10 bg-white rounded-full"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-500 fas fa-heart text-xl">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                      </svg>
-                    </span>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                        </svg>   
-                    </span>
-                 <a class="btn bg-primary-btn text-xl font-extrabold rounded-[32px]">Book Consult 
-                    <span class="flex items-center justify-center h-10 w-10 bg-black rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white fas fa-heart text-xl">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                        </svg>
-                    </span>
-                 </a>
-                </div>
-              </div>
+          </ul>
+        
+          <!-- Right Side: Hamburger Icon, Icons, and Text -->
+          <div class="flex items-center space-x-4">
+            <!-- Hamburger Icon (shown on small screens) -->
+            <button id="menu-toggle" class="text-gray-600 hover:text-gray-300 md:hidden focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+            <!-- Other Icons -->
+            <div class="hidden md:block lg:flex lg:justify-center lg:gap-4 font-bold">
+              <span class="flex items-center justify-center h-10 w-10 bg-gray-200 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-800 fas fa-heart text-xl">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </span>
+            <span class="flex items-center justify-center h-10 w-10 bg-gray-200 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-800 fas fa-heart text-xl">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>   
+            </span>
+         <a class="btn bg-primary-btn text-xl font-extrabold rounded-[32px]">Book Consult 
+            <span class="flex items-center justify-center h-10 w-10 bg-black rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white fas fa-heart text-xl">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+            </span>
+         </a>
+            </div>
+          </div>
         </nav>
+        
+        <!-- Dropdown Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+          <ul class="flex flex-col space-y-4 p-4">
+                    <li><a class="text-base font-extrabold text-zinc-600">Home</a></li>
+                    <li><a class="text-base text-gray-500">Services</a></li>
+                    <li><a class="text-base text-gray-500">Portfolio</a></li>
+                    <li><a class="text-base text-gray-500">Blogs</a></li>
+                    <li><a class="text-base text-gray-500">Contact Us</a></li>
+          </ul>
+        </div>
+        
         <!-- header content -->
          <section>
           <div class="hero min-h-screen">
             <div class="hero-content flex-col lg:flex-col">
               <img
                 src="./assets/banner.png"
-                class="max-w-xl rounded-lg" />
+                class="max-w-sm lg:max-w-lg rounded-lg" />
               <div class="text-center">
-                <h1 class="text-6xl font-extrabold">A barn house of this design has a <br> striking appearance</h1>
+                <h1 class="text-3xl lg:text-6xl font-black">A barn house of this design has a <br> striking appearance</h1>
                 <p class="py-6 text-base">
                   The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal <br> accents, and large windows that flood the space with natural light.
                 </p>
@@ -127,7 +135,7 @@
           <div class="hero-content flex-col gap-9 lg:flex-row-reverse">
             <img
               src="./assets/Rectangle.png"
-              class="max-w-xl rounded-lg" />
+              class="max-w-sm lg:max-w-xl rounded-lg" />
             <div>
               <img src="./assets/Vector.png" alt="">
               <a class="btn bg-white border text-base text-gray-600 px-4 py-2 font-bold rounded-[24px] mt-1"><span class="flex items-center justify-center h-7 w-8">
@@ -138,16 +146,15 @@
              About Us
              </a>
               <h1 class="text-4xl font-extrabold py-4">We design thoughtful, <br>liveable spaces</h1>
-              <p class="py-3 text-base">The barn house captivates with its blend of rustic charm and <br>
-                modern sophistication, featuring weathered wood, sleek metal accents.
+              <p class="py-3 text-base">At Rinterio, we specialize in designing spaces that are both livable and thoughtful.
               </p>
               <div class="flex bg-white rounded-[16px] gap-6 my-6 px-6 py-6">
                 <div>
                   <img src="./assets/commercial.png" alt="">
                 </div>
                 <div>
-                  <h3>Commercial</h3>
-                  <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                  <h3 class="text-xl font-extrabold">Commercial</h3>
+                  <p class="text-sm font-medium text-gray-500">Our commercial design services cater to a wide range of businesses, <br>from retail spaces and offices to hospitality and industrial facilities.</p>
                 </div>
               </div>
               <div class="flex bg-white rounded-[16px] gap-6 px-6 py-6">
@@ -155,8 +162,8 @@
                   <img src="./assets/residential.png" alt="">
                 </div>
                 <div>
-                  <h3>Residential</h3>
-                  <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                  <h3 class="text-xl font-extrabold">Residential</h3>
+                  <p class="text-sm font-medium text-gray-500">Our residential design services are dedicated to creating homes that are <br>both beautiful and functional, tailored to your lifestyle and personal tastes.</p>
                 </div>
               </div>
             </div>
@@ -174,28 +181,28 @@
             How we works
            </a>
             <h1 class="text-4xl font-extrabold mb-6">Our Works Process</h1>
-            <p class="text-base">The barn house captivates with its blend of rustic charm and modern sophistication,<br> featuring weathered wood, sleek metal accents.</p>
+            <p class="text-base">Our works process is a carefully crafted journey designed to ensure the highest quality and satisfaction. We start with in-depth consultations <br> to understand your vision, followed by detailed planning and design phases where creativity meets precision.</p>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-left">
             <div class="rounded-3xl bg-lavender-light overflow-hidden px-6 py-5">
               <img src="./assets/concept.png" alt="">
               <h2 class="text-xl font-bold my-3">Concept</h2>
-              <p class="text-base">The barn house captivates <br> with its blend of rustic charm <br> and modern.</p>
+              <p class="text-base">We are dedicated to pushing the boundaries of modern architecture, incorporating cutting-edge technology and sustainable practices into every project. Our approach is client-centered, ensuring that every design is tailored to meet the specific needs and aspirations of those who will live, work, or interact with the spaces we create.</p>
             </div>
             <div class="rounded-3xl bg-yellow-light overflow-hidden px-6 py-6">
               <img src="./assets/flow-chart.png" alt="">
               <h2 class="text-xl font-bold my-3">Design Process</h2>
-              <p class="text-base">The barn house captivates <br> with its blend of rustic charm <br> and modern.</p>
+              <p class="text-base">Our design process is a collaborative journey, starting with understanding your vision and translating it into a tangible plan. We begin with an in-depth consultation to capture your ideas, needs, and preferences.</p>
             </div>
             <div class="rounded-2xl bg-pest-light overflow-hidden px-6 py-6">
               <img src="./assets/vision.png" alt="">
               <h2 class="text-xl font-bold my-3">Supervision</h2>
-              <p class="text-base">The barn house captivates <br> with its blend of rustic charm <br> and modern.</p>
+              <p class="text-base">Supervision is a critical component of our service, ensuring that your project is executed to the highest standards. Our experienced supervisors are on-site to monitor every phase of construction, from foundation to finishing touches. </p>
             </div>
             <div class="rounded-2xl bg-blue-light overflow-hidden px-6 py-6">
               <img src="./assets/budget-planning.png" alt="">
               <h2 class="text-xl font-bold my-3">Budget Planning</h2>
-              <p class="text-base">The barn house captivates <br> with its blend of rustic charm <br> and modern.</p>
+              <p class="text-base">Budget planning is the cornerstone of a successful building project. We work with you to establish a clear and realistic budget from the outset, taking into account all aspects of the design and construction process.</p>
             </div>
           </div>
         </section>
@@ -212,7 +219,7 @@
                   Explore our Latest works
                </a>
                <h2 class="text-[40px] font-extrabold mb-6">Our Latest Portfolio</h2>
-               <p class="text-base">The barn house captivates with its blend of rustic charm and modern sophistication,<br> featuring weathered wood, sleek metal accents.</p>
+               <p class="text-base">Explore our latest portfolio to see the innovative and diverse range of projects we've recently completed.Dive into our work <br> to find inspiration and discover how we can bring your next vision to life.</p>
                </div>
                <!-- image-->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 pb-6">
@@ -271,89 +278,71 @@
             </div>
         </section>
         <!-- unique section -->
-         <section class="mx-auto">
+         <section class="py-8 lg:py-24">
+          <!-- text part -->
           <div class="text-center">
             <h2 class="text-5xl font-extrabold my-8">Our Happy <span class="text-orange-500">Clients</span></h2>
             <p class="text-base text-gray-600 my-8">Here our some happy clients. We provided them service and they gave us their personal thoughtful response. They also gave some ratings. <br>So we would love to work with more people.</p>
           </div>
-          <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 overflow-hidden mx-16 text-center">
-            <div class="card bg-base-100 w-96 shadow-xl">
-              <figure class="px-10 pt-10">
-                <img
-                  src="./assets/austin-distel-7uoMmzPd2JA-unsplash.jpg"
-                  alt="Shoes"
-                  class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title font-extrabold text-2xl">Austin Mark</h2>
-                <p class="font-normal text-base text-gray-500">"The designs are not just trendy, but timeless. They have a way of creating spaces that feel both contemporary and enduring, ensuring that the buildings will remain stylish and relevant for years to come."</p>
-                <div class="rating">
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked="checked" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                </div>
+          <!-- grid part -->
+           <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 text-center mx-8">
+            <div class="rounded-xl shadow-md bg-gray-200 overflow-hidden ">
+              <img class="mx-auto pt-4 bg-cover" src="./assets/austin-distel-7uoMmzPd2JA-unsplash.jpg" alt="">
+              <div class="p-4">
+              <h2 class="font-extrabold text-2xl">Austin Mark</h2>
+              <p class="font-normal text-base text-gray-500">"The designs are not just trendy, but timeless. They have a way of creating spaces that feel both contemporary and enduring, ensuring that the buildings will remain stylish and relevant for years to come."</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked="checked" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
               </div>
             </div>
-            <div class="card bg-base-100 w-96 shadow-xl">
-              <figure class="px-10 pt-10">
-                <img
-                  src="./assets/ivana-cajina-_7LbC5J-jw4-unsplash.jpg"
-                  alt="Shoes"
-                  class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title font-extrabold text-2xl">Austin Mark</h2>
-                <p class="font-normal text-base text-gray-500">"The designs are not just trendy, but timeless. They have a way of creating spaces that feel both contemporary and enduring, ensuring that the buildings will remain stylish and relevant for years to come."</p>
-                <div class="rating">
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked="checked" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                </div>
+            <div class="rounded-xl shadow-md bg-gray-200 overflow-hidden ">
+              <img class="mx-auto pt-4 bg-cover" src="./assets/shipman-northcutt-sgZX15Da8YE-unsplash.jpg" alt="">
+              <div class="p-4">
+              <h2 class="font-extrabold text-2xl">Shipman Northcutt</h2>
+              <p class="font-normal text-base text-gray-500">"The attention to detail and craftsmanship in these designs is unparalleled. Each project is a true masterpiece, combining functionality with aesthetics in a way that makes every building stand out. Highly recommended for anyone seeking innovative and sophisticated architectural solutions."</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked="checked" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
               </div>
             </div>
-            <div class="card bg-base-100 w-96 shadow-xl">
-              <figure class="px-10 pt-10">
-                <img
-                  src="./assets/shipman-northcutt-sgZX15Da8YE-unsplash.jpg"
-                  alt="Shoes"
-                  class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title font-extrabold text-2xl">Austin Mark</h2>
-                <p class="font-normal text-base text-gray-500">"The designs are not just trendy, but timeless. They have a way of creating spaces that feel both contemporary and enduring, ensuring that the buildings will remain stylish and relevant for years to come."</p>
-                <div class="rating">
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked="checked" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                </div>
+            <div class="rounded-xl shadow-md bg-gray-200 overflow-hidden ">
+              <img class="mx-auto pt-4 bg-cover" src="./assets/jessica-radanavong-mrYkTuAesKE-unsplash.jpg" alt="">
+              <div class="p-4">
+              <h2 class="font-extrabold text-2xl">Jessica Radanavong</h2>
+              <p class="font-normal text-base text-gray-500">"From concept to completion, the team consistently delivers exceptional designs that blend modern elegance with practical functionality. The creativity and innovation in their work are truly inspiring, making them a top choice for anyone looking to elevate their architectural projects."</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked="checked" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
               </div>
             </div>
-            <div class="card bg-base-100 w-96 shadow-xl">
-              <figure class="px-10 pt-10">
-                <img
-                  src="./assets/jessica-radanavong-mrYkTuAesKE-unsplash.jpg"
-                  alt="Shoes"
-                  class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title font-extrabold text-2xl">Austin Mark</h2>
-                <p class="font-normal text-base text-gray-500">"The designs are not just trendy, but timeless. They have a way of creating spaces that feel both contemporary and enduring, ensuring that the buildings will remain stylish and relevant for years to come."</p>
-                <div class="rating">
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked="checked" />
-                  <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
-                </div>
+            <div class="rounded-xl shadow-md bg-gray-200 overflow-hidden ">
+              <img class="mx-auto pt-4 bg-cover" src="./assets/ivana-cajina-_7LbC5J-jw4-unsplash.jpg" alt="">
+              <div class="p-4">
+              <h2 class="font-extrabold text-2xl">Ivana Cajina</h2>
+              <p class="font-normal text-base text-gray-500">"Working with this team has been an absolute pleasure. Their professionalism, attention to detail, and commitment to excellence are evident in every aspect of their work. I highly recommend them for any building design needs."</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked="checked" />
+                <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
               </div>
             </div>
-          </div>
+           </div>
          </section>
         <!-- let's connect section-->
          <section style="background-image: url('./assets/bg.jpg');">
@@ -368,7 +357,7 @@
               Let's Connect
              </a>
              <h2 class="text-[40px] font-extrabold mb-6">Let's Discuss Next Project</h2>
-             <p class="text-base">The barn house captivates with its blend of rustic charm and modern sophistication,<br> featuring weathered wood, sleek metal accents.</p>
+             <p class="text-base">Whether you're planning a new commercial development or a dream residential space, we're here to bring your ideas to life. Our team is committed to understanding your needs, <br>working closely with you to ensure every detail aligns with your expectations</p>
              </div>
              <!-- form -->
               <div>
@@ -415,8 +404,7 @@
           </div>
          </section>
     </main>
-    
-    <footer class="bg-black text-white py-24">
+    <footer class="bg-footer-back text-white py-24">
       <div class="text-center mb-4">
         <div class="flex items-center justify-center mb-4">
           <h2 class="btn btn-ghost text-3xl text-white font-extrabold pb-4">
@@ -426,7 +414,7 @@
               </svg>
             </span>Rinterio</h2>
         </div>
-        <p class="text-gray-400 mb-12">The barn house captivates with its blend of rustic charm and modern sophistication,<br/> featuring weathered wood, sleek metal accents.</p>
+        <p class="text-gray-400 mb-12"> Our expertise spans residential and commercial projects, ensuring every design meets the highest standards of quality and creativity. <br>Connect with us to explore how we can transform your vision into a remarkable reality.</p>
       </div>
       <div class="grid justify-center">
         <div class="grid grid-cols-1 grid-flow-row lg:grid-cols-5 lg:grid-flow-col justify-center lg:gap-x-36 gap-y-8 mb-12">
